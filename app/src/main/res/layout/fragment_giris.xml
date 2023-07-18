@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GirisFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="51dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/spotify_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Milyonlarca şarkı.\nSpotify'da ücrestiz."
+        android:textColor="#EDE7E7"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/buttonKaydol"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Ücretsiz Kaydol"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0B0A0A"
+        android:text="Google ile devam et"
+        android:textStyle="bold"
+        app:icon="@drawable/google_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonKaydol"
+        app:strokeColor="#E8DCDC" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0B0A0A"
+        android:text="Facebook ile devam et"
+        android:textStyle="bold"
+
+        app:icon="@drawable/face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textViewOturumAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Oturum Aç"
+        android:textColor="#EAE4E4"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="20dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="26dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/google_icon"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
