@@ -9,10 +9,32 @@
         android:id="@+id/girisFragment"
         android:name="com.example.spotify.GirisFragment"
         android:label="fragment_giris"
-        tools:layout="@layout/fragment_giris" />
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/frag_giris_to_kaydol_gecis"
+            app:destination="@id/kaydolFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/kaydolFragment"
         android:name="com.example.spotify.KaydolFragment"
         android:label="fragment_kaydol"
-        tools:layout="@layout/fragment_kaydol" />
+        tools:layout="@layout/fragment_kaydol" >
+        <action
+            android:id="@+id/frag_kaydol_to_sifre_gecis"
+            app:destination="@id/sifreKaydolFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/sifreKaydolFragment"
+        android:name="com.example.spotify.SifreKaydolFragment"
+        android:label="fragment_sifre_kaydol"
+        tools:layout="@layout/fragment_sifre_kaydol" />
+
 </navigation>

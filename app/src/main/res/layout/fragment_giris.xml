@@ -11,7 +11,7 @@
         android:id="@+id/imageView3"
         android:layout_width="51dp"
         android:layout_height="52dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/spotify_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="75dp"
         android:text="Milyonlarca şarkı.\nSpotify'da ücrestiz."
         android:textColor="#EDE7E7"
         android:textSize="34sp"
@@ -93,19 +93,19 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="20dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="34dp"
+        android:layout_width="21dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/face"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="26dp"
-        android:layout_height="22dp"
+        android:layout_width="27dp"
+        android:layout_height="23dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/google_icon"
         app:layout_constraintBottom_toTopOf="@+id/button5"

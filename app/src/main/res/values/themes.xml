@@ -5,7 +5,12 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:background">@color/black</item>
         <item name="android:statusBarColor">@color/black</item>
+
     </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
 
     <style name="Theme.Spotify" parent="Base.Theme.Spotify" />
 </resources>
