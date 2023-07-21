@@ -17,18 +17,25 @@ class SifreKaydolFragment : Fragment() {
         tasarim = FragmentSifreKaydolBinding.inflate(layoutInflater)
 
         val SharedPreferences = activity?.getSharedPreferences("kullaniciBilgi", Context.MODE_PRIVATE)
-
         val editor = SharedPreferences?.edit()
 
         val gelenEmail = SharedPreferences?.getString("email","Email bilgisi gelmedi")
         Log.e("email",gelenEmail.toString())
+
+        tasarim.editTextEmail.setText(gelenEmail)
+        val sifre = tasarim.editTextSifre.text
+
         tasarim.buttonOturumAc.setOnClickListener {
 
+            editor?.putString("sifre",sifre.toString())
+            editor?.commit()
+            Log.e("sifreyiyaz",sifre.toString())
 
         }
 
-
         return tasarim.root
+
+
 
 
 

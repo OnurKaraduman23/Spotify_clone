@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/editTextEmail"
         android:layout_width="379dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -47,14 +47,14 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/white"
         app:passwordToggleTintMode="src_in">
 
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/editTextSifre"
             android:layout_width="379dp"
             android:layout_height="47dp"
             android:background="#AAA6A6"
@@ -96,5 +96,5 @@
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>

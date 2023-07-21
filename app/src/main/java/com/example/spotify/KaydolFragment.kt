@@ -21,9 +21,9 @@ class KaydolFragment : Fragment()  {
         tasarim = FragmentKaydolBinding.inflate(layoutInflater)
 
 
-        //veri kaydetme işlemli
+        //veri kaydetme işlemi
 
-//        val SharedPreferences    = this.activity?.getSharedPreferences("KullaniciBilgileri",Context.MODE_PRIVATE)
+
 
         val SharedPreferences = activity?.getSharedPreferences("kullaniciBilgi",Context.MODE_PRIVATE)
 
@@ -38,6 +38,7 @@ class KaydolFragment : Fragment()  {
 
             editor?.putString("email",emailInput)
             editor?.commit()
+
             Navigation.findNavController(it).navigate(R.id.frag_kaydol_to_sifre_gecis)
 
 
