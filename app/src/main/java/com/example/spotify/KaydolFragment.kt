@@ -33,7 +33,7 @@ class KaydolFragment : Fragment()  {
 
 
         tasarim.buttonSonraki.setOnClickListener {
-//            Navigation.findNavController(it).navigate
+
             val emailInput = tasarim.editTextText.text.toString()
 
             editor?.putString("email",emailInput)
