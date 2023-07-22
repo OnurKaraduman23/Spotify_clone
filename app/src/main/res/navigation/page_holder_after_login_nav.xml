@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_holder_after_login_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.spotify.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" />
+    <fragment
+        android:id="@+id/araFragment"
+        android:name="com.example.spotify.AraFragment"
+        android:label="fragment_ara"
+        tools:layout="@layout/fragment_ara" />
+    <fragment
+        android:id="@+id/kitaplikFragment"
+        android:name="com.example.spotify.KitaplikFragment"
+        android:label="fragment_kitaplik"
+        tools:layout="@layout/fragment_kitaplik" />
+</navigation>

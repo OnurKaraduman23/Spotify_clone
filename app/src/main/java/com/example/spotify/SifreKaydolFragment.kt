@@ -31,6 +31,9 @@ class SifreKaydolFragment : Fragment() {
             editor?.commit()
             Log.e("sifreyiyaz",sifre.toString())
 
+            Navigation.findNavController(it).navigate(R.id.frag_sifre_kaydol_to_page_holer_after_login)
+
+
         }
 
         return tasarim.root

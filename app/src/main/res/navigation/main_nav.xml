@@ -35,6 +35,15 @@
         android:id="@+id/sifreKaydolFragment"
         android:name="com.example.spotify.SifreKaydolFragment"
         android:label="fragment_sifre_kaydol"
-        tools:layout="@layout/fragment_sifre_kaydol" />
+        tools:layout="@layout/fragment_sifre_kaydol" >
+        <action
+            android:id="@+id/frag_sifre_kaydol_to_page_holer_after_login"
+            app:destination="@id/pageHolderAfterLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageHolderAfterLoginFragment"
+        android:name="com.example.spotify.PageHolderAfterLoginFragment"
+        android:label="fragment_page_holder_after_login"
+        tools:layout="@layout/fragment_page_holder_after_login" />
 
 </navigation>
