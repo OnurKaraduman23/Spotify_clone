@@ -3,6 +3,7 @@
 
     <item
         android:id="@+id/anasayfaFragment"
+        android:contentDescription="deneme"
         android:icon="@drawable/anasayfa_resim"
         android:title="Anasayfa" />
     <item
