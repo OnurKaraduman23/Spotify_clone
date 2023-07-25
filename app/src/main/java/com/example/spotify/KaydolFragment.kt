@@ -16,12 +16,16 @@ import com.example.spotify.databinding.FragmentKaydolBinding
 private lateinit var tasarim: FragmentKaydolBinding
 class KaydolFragment : Fragment()  {
 
+    private lateinit var kullanicilarList: ArrayList<Kullanicilar>
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         tasarim = FragmentKaydolBinding.inflate(layoutInflater)
 
 
         //veri kaydetme işlemi
+
+
 
 
 
@@ -34,7 +38,7 @@ class KaydolFragment : Fragment()  {
 
         tasarim.buttonSonraki.setOnClickListener {
 
-            val emailInput = tasarim.editTextText.text.toString()
+            val emailInput = tasarim.editTextText.text.toString().trim()
 
             editor?.putString("email",emailInput)
             editor?.commit()

@@ -8,13 +8,15 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.spotify.databinding.ActivityMainBinding
 
-private lateinit var binding:ActivityMainBinding
+private lateinit var tasarim:ActivityMainBinding
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        tasarim = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(tasarim.root)
+
 
 
         // toolbar ve back arrow
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         navHostFragment.findNavController().run {
 
-                binding.toolbar3.setupWithNavController(this, AppBarConfiguration(graph))
+                tasarim.toolbar3.setupWithNavController(this, AppBarConfiguration(graph))
         }
 
 
