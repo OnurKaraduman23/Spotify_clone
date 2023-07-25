@@ -17,6 +17,9 @@
             app:exitAnim="@android:anim/slide_in_left"
             app:popEnterAnim="@android:anim/slide_out_right"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/frag_giris_to_kayitliKullaniciGiris"
+            app:destination="@id/kayitliKullaniciGirisFragment" />
     </fragment>
     <fragment
         android:id="@+id/kaydolFragment"
@@ -45,5 +48,22 @@
         android:name="com.example.spotify.PageHolderAfterLoginFragment"
         android:label="fragment_page_holder_after_login"
         tools:layout="@layout/fragment_page_holder_after_login" />
+    <fragment
+        android:id="@+id/kayitliKullaniciGirisFragment"
+        android:name="com.example.spotify.KayitliKullaniciGirisFragment"
+        android:label="fragment_kayitli_kullanici_giris"
+        tools:layout="@layout/fragment_kayitli_kullanici_giris" >
+        <argument
+            android:name="kullaniciAdi"
+            app:argType="string"
+            android:defaultValue="kullanıcı adı gelmedi" />
+        <argument
+            android:name="kullaniciSifre"
+            app:argType="string"
+            android:defaultValue="Sifre gelmedi" />
+        <action
+            android:id="@+id/frag_kayitli_kullanici_to_anasayfa"
+            app:destination="@id/pageHolderAfterLoginFragment" />
+    </fragment>
 
 </navigation>

@@ -7,15 +7,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 import com.example.spotify.databinding.FragmentGirisBinding
 import com.google.android.material.snackbar.Snackbar
 
 private lateinit var tasarim:FragmentGirisBinding
 class GirisFragment : Fragment() {
 
+    private lateinit var kullaniciList:ArrayList<Kullanicilar>
+    private lateinit var vt : DatabaseHelper
+    private lateinit var kullaniciAdi : String
+    private lateinit var kullaniciSifre : String
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         tasarim = FragmentGirisBinding.inflate(layoutInflater)
+
+        vt = DatabaseHelper(requireContext())
+
+        kullaniciList = Kullanicilardao().KullaniciGetir(vt)
+       for (k in kullaniciList){
+           kullaniciAdi = k.kullanici_ad
+           kullaniciSifre = k.kullanici_sifre
+       }
+
+
 
 
         tasarim.buttonKaydol.setOnClickListener {
@@ -24,10 +40,10 @@ class GirisFragment : Fragment() {
 
         }
         tasarim.textViewOturumAc.setOnClickListener{
-            Snackbar.make(tasarim.imageView4,"Kullanıcı adı: deneme@gmail.com\n Sifre:1234 Oturum açmak istiyor musunuz?",Snackbar.LENGTH_SHORT)
-                .setAction("EVET"){
+            val gecis = GirisFragmentDirections.fragGirisToKayitliKullaniciGiris(kullaniciAdi,kullaniciSifre)
+            Navigation.findNavController(it).navigate(gecis)
 
-                }.show()
+
         }
 
         return tasarim.root

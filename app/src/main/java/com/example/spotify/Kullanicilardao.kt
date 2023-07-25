@@ -16,4 +16,20 @@ class Kullanicilardao {
         db.close()
 
     }
+
+    fun KullaniciGetir(vt:DatabaseHelper):ArrayList<Kullanicilar>{
+        val db = vt.writableDatabase
+        val kullaniciListe = ArrayList<Kullanicilar>()
+        val c = db.rawQuery("SELECT * FROM kullanicilar WHERE kullanici_id = 1",null)
+
+        while (c.moveToNext()){
+            val kullanici = Kullanicilar(c.getInt(c.getColumnIndexOrThrow("kullanici_id"))
+                ,c.getString(c.getColumnIndexOrThrow("kullanici_ad"))
+                ,c.getString(c.getColumnIndexOrThrow("kullanici_sifre")))
+
+                kullaniciListe.add(kullanici)
+
+        }
+        return kullaniciListe
+    }
 }
