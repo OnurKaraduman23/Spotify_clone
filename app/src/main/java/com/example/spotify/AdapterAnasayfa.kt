@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterAnasayfa(private val mContext:Context, private val DGCarviewVeileriListesi:List<AnasayfaCardviewVeriler>)
+class AdapterAnasayfa(private val mContext:Context, private val DGCarviewVeileriListesi:List<AnasayfaVeri1>)
     : RecyclerView.Adapter<AdapterAnasayfa.CardViewObjectHolder>() {
 
     inner class CardViewObjectHolder(holder: View):RecyclerView.ViewHolder(holder){
@@ -38,10 +38,13 @@ class AdapterAnasayfa(private val mContext:Context, private val DGCarviewVeileri
 
     override fun onBindViewHolder(holder: CardViewObjectHolder, position: Int) {
         val cardNesnesi = DGCarviewVeileriListesi[position]
-        holder.textViewMetin.text = cardNesnesi.card_metin
+        holder.textViewMetin.text = cardNesnesi.veri_metin
+
+        //dinamik olarak resimleri gösterme
+        holder.imageView.setImageResource(mContext.resources.getIdentifier(cardNesnesi.veri_gorsel,"drawable",mContext.packageName))
 
         holder.cardView.setOnClickListener {
-            Toast.makeText(mContext,"Seçilen : ${cardNesnesi.card_metin}",Toast.LENGTH_SHORT).show()
+            Toast.makeText(mContext,"Seçilen : ${cardNesnesi.veri_metin}",Toast.LENGTH_SHORT).show()
         }
     }
 }
